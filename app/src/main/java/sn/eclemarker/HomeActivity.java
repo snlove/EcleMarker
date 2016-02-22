@@ -59,11 +59,12 @@ public class HomeActivity extends AppCompatActivity {
     private void initView() {
         layoutInflater = LayoutInflater.from(this);
         mTabHost = (FragmentTabHost) findViewById(R.id.framHost);
-        toolbar = (CusToolBar) findViewById(R.id.tool_Bar);
+        toolbar = (CusToolBar) findViewById(R.id.setToolbar);
         setSupportActionBar(toolbar);
+
+
         // 必须调用setup方法
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
-
         //将信息封装在Tab里
         Tab tab_home = new Tab(MainFragment.class, R.drawable.mian_statelist, R.string.main_show);
         Tab tab_discover = new Tab(DiscoverFragment.class, R.drawable.discover_state, R.string.main_discover);
